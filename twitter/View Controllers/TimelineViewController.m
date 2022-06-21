@@ -13,6 +13,7 @@
 
 @interface TimelineViewController ()
 - (IBAction)didTapLogout:(id)sender;
+@property (strong, nonatomic) NSMutableArray *arrayOfTweets;
 
 @end
 
@@ -25,6 +26,8 @@
     [[APIManager shared] getHomeTimelineWithCompletion:^(NSArray *tweets, NSError *error) {
         if (tweets) {
             NSLog(@"😎😎😎 Successfully loaded home timeline");
+            // cast tweets to a mutable array
+            self.arrayOfTweets = (NSMutableArray *)tweets; //casting tweets to a mutable array
             for (NSDictionary *dictionary in tweets) {
                 NSString *text = dictionary[@"text"];
                 NSLog(@"%@", text);

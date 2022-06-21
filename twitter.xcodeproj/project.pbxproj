@@ -19,7 +19,7 @@
 		6AD2790920BCC04D0085BC29 /* TimelineViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 6AD2790820BCC04D0085BC29 /* TimelineViewController.m */; };
 		EE6D10F12861298100A89C31 /* User.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6D10F02861298100A89C31 /* User.m */; };
 		EE6D10F428612A9E00A89C31 /* Tweet.m in Sources */ = {isa = PBXBuildFile; fileRef = EE6D10F328612A9E00A89C31 /* Tweet.m */; };
-		EEB1E4872861200D0071C0A8 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EEB1E4862861200D0071C0A8 /* Keys.plist */; };
+		EE6D10F8286234F400A89C31 /* Keys.plist in Resources */ = {isa = PBXBuildFile; fileRef = EE6D10F7286234F400A89C31 /* Keys.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -46,7 +46,7 @@
 		EE6D10F02861298100A89C31 /* User.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = User.m; sourceTree = "<group>"; };
 		EE6D10F228612A9E00A89C31 /* Tweet.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Tweet.h; sourceTree = "<group>"; };
 		EE6D10F328612A9E00A89C31 /* Tweet.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Tweet.m; sourceTree = "<group>"; };
-		EEB1E4862861200D0071C0A8 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
+		EE6D10F7286234F400A89C31 /* Keys.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Keys.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,7 +101,7 @@
 				6AD278E320BC4B970085BC29 /* LaunchScreen.storyboard */,
 				6AD278E620BC4B970085BC29 /* Info.plist */,
 				6AD278E720BC4B970085BC29 /* main.m */,
-				EEB1E4862861200D0071C0A8 /* Keys.plist */,
+				EE6D10F7286234F400A89C31 /* Keys.plist */,
 			);
 			path = twitter;
 			sourceTree = "<group>";
@@ -213,7 +213,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				EEB1E4872861200D0071C0A8 /* Keys.plist in Resources */,
+				EE6D10F8286234F400A89C31 /* Keys.plist in Resources */,
 				6AD278E520BC4B970085BC29 /* LaunchScreen.storyboard in Resources */,
 				6AD278E220BC4B970085BC29 /* Assets.xcassets in Resources */,
 				6AD278E020BC4B950085BC29 /* Main.storyboard in Resources */,

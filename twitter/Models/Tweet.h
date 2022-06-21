@@ -29,7 +29,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 //MARK: Methods
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary; // for method to be recognized by compiler
-
++ (NSMutableArray *)tweetsWithArray:(NSArray *)dictionaries;
 
 @end
 

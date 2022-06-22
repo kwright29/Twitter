@@ -30,14 +30,19 @@
     // Pass the selected object to the new view controller.
 }
 */
-- (IBAction)doesTapTweet:(id)sender {
-    [[APIManager shared] postStatusWithText:@"" completion:^(Tweet *tweet, NSError *error) {
+- (IBAction)didTapTweet:(id)sender {
+    [[APIManager shared] postStatusWithText:self.composeTweetText.text completion:^(Tweet *tweet, NSError *error) {
         if (tweet) {
-            
+            [self.delegate didTweet:tweet];
+            NSLog(@"Compose Tweet Success!");
+            [self dismissViewControllerAnimated:true completion:nil];
+        }
+        else {
+            NSLog(@"Error composting Tweet %@", error.localizedDescription);
         }
     }];
 }
-- (IBAction)doesTapClose:(id)sender {
+- (IBAction)didTapClose:(id)sender {
     [self dismissViewControllerAnimated:true completion:nil];
 }
 

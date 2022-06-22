@@ -77,12 +77,12 @@
                     <navigationItem key="navigationItem" id="aOI-FA-3Pz">
                         <barButtonItem key="leftBarButtonItem" title="Close" id="J6k-VZ-elt">
                             <connections>
-                                <action selector="doesTapClose:" destination="SS5-Oe-0rL" id="v1b-Jr-wuy"/>
+                                <action selector="didTapClose:" destination="SS5-Oe-0rL" id="3br-5F-2xf"/>
                             </connections>
                         </barButtonItem>
                         <barButtonItem key="rightBarButtonItem" title="Tweet" id="oP7-qb-ebb">
                             <connections>
-                                <action selector="doesTapTweet:" destination="SS5-Oe-0rL" id="RJY-vB-LUF"/>
+                                <action selector="didTapTweet:" destination="SS5-Oe-0rL" id="kIH-FE-sif"/>
                             </connections>
                         </barButtonItem>
                     </navigationItem>

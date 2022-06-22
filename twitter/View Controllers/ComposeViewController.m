@@ -7,6 +7,7 @@
 //
 
 #import "ComposeViewController.h"
+#import "APIManager.h"
 
 @interface ComposeViewController ()
 @property (strong, nonatomic) IBOutlet UITextView *composeTweetText;
@@ -30,6 +31,11 @@
 }
 */
 - (IBAction)doesTapTweet:(id)sender {
+    [[APIManager shared] postStatusWithText:@"" completion:^(Tweet *tweet, NSError *error) {
+        if (tweet) {
+            
+        }
+    }];
 }
 - (IBAction)doesTapClose:(id)sender {
     [self dismissViewControllerAnimated:true completion:nil];

@@ -163,6 +163,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="h6u-uf-01l">
                                                     <rect key="frame" x="193" y="117" width="31" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                    </accessibility>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="retweet-icon" title=""/>
                                                     <connections>
@@ -172,8 +175,11 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zq7-Mk-hYM">
                                                     <rect key="frame" x="274" y="117" width="28" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                    </accessibility>
                                                     <state key="normal" title="Button"/>
-                                                    <buttonConfiguration key="configuration" style="plain" image="favor-icon"/>
+                                                    <buttonConfiguration key="configuration" style="plain" image="favor-icon" title=""/>
                                                     <connections>
                                                         <action selector="didTapFavorite:" destination="Nob-oE-mqu" eventType="touchUpInside" id="4RS-7z-MTp"/>
                                                     </connections>
@@ -181,6 +187,9 @@
                                                 <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PKj-2c-POj">
                                                     <rect key="frame" x="108" y="117" width="37" height="32"/>
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                    <accessibility key="accessibilityConfiguration">
+                                                        <accessibilityTraits key="traits" button="YES" image="YES"/>
+                                                    </accessibility>
                                                     <state key="normal" title="Button"/>
                                                     <buttonConfiguration key="configuration" style="plain" image="reply-icon" title=""/>
                                                     <connections>
@@ -203,7 +212,13 @@
                                         <connections>
                                             <outlet property="createdDate" destination="Sb3-8n-rMu" id="P87-1b-Lu3"/>
                                             <outlet property="displayName" destination="ekP-Jz-pku" id="mh2-Yt-eFz"/>
+                                            <outlet property="favoriteButton" destination="zq7-Mk-hYM" id="0zC-fB-fzJ"/>
+                                            <outlet property="favoritedCount" destination="oC2-MS-iEL" id="do0-sq-tNv"/>
                                             <outlet property="profilePic" destination="ejv-y8-5zN" id="NHW-FD-Aad"/>
+                                            <outlet property="replyButton" destination="PKj-2c-POj" id="cPl-ru-uZA"/>
+                                            <outlet property="replyCount" destination="JNH-5Z-e4v" id="jku-l4-p88"/>
+                                            <outlet property="retweetButton" destination="h6u-uf-01l" id="6PD-pT-R6Z"/>
+                                            <outlet property="retweetCount" destination="jgh-sh-hob" id="5wm-IK-l5i"/>
                                             <outlet property="textOfTweet" destination="JLQ-qd-slF" id="aip-mB-pLi"/>
                                             <outlet property="username" destination="aNR-bs-G9J" id="AKK-vo-ypn"/>
                                         </connections>

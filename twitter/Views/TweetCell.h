@@ -17,6 +17,13 @@ NS_ASSUME_NONNULL_BEGIN
 @property (strong, nonatomic) IBOutlet UILabel *username;
 @property (strong, nonatomic) IBOutlet UILabel *createdDate;
 @property (strong, nonatomic) IBOutlet UILabel *textOfTweet;
+@property (strong, nonatomic) IBOutlet UILabel *replyCount;
+@property (strong, nonatomic) IBOutlet UILabel *retweetCount;
+@property (strong, nonatomic) IBOutlet UILabel *favoritedCount;
+@property (strong, nonatomic) IBOutlet UIButton *favoriteButton;
+@property (strong, nonatomic) IBOutlet UIButton *retweetButton;
+@property (strong, nonatomic) IBOutlet UIButton *replyButton;
+
 - (IBAction)didTapRetweet:(id)sender;
 - (IBAction)didTapFavorite:(id)sender;
 - (IBAction)didTapReply:(id)sender;

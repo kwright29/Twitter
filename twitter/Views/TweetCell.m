@@ -7,6 +7,7 @@
 //
 
 #import "TweetCell.h"
+#import "UIImageView+AFNetworking.h"
 
 @implementation TweetCell
 
@@ -19,6 +20,19 @@
     [super setSelected:selected animated:animated];
 
     // Configure the view for the selected state
+}
+
+- (void)setTweet:(Tweet *)tweet {
+    _tweet = tweet;
+    
+    self.displayName.text = self.tweet.user.name;
+    self.username.text = self.tweet.user.screenName;
+    self.createdDate.text = self.tweet.createdAtString;
+    self.textOfTweet.text = self.tweet.text;
+    NSURL *profilePicURL = [NSURL URLWithString:self.tweet.user.profilePicture];
+    [self.profilePic setImageWithURL:profilePicURL];
+    
+    
 }
 
 - (IBAction)didTapReply:(id)sender {

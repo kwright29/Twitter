@@ -7,6 +7,7 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "Tweet.h"
 
 NS_ASSUME_NONNULL_BEGIN
 
@@ -19,7 +20,9 @@ NS_ASSUME_NONNULL_BEGIN
 - (IBAction)didTapRetweet:(id)sender;
 - (IBAction)didTapFavorite:(id)sender;
 - (IBAction)didTapReply:(id)sender;
-@property (strong, nonatomic) NSDictionary *tweet;
+@property (strong, nonatomic) Tweet *tweet;
+
+//- (void)configureTweet:(Tweet *)tweet;
 
 @end
 

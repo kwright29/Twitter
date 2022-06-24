@@ -14,6 +14,7 @@
 #import "Tweet.h"
 #import "TweetCell.h"
 #import "UIImageView+AFNetworking.h"
+#import "DetailsViewController.h"
 
 @interface TimelineViewController () <ComposeViewControllerDelegate, UITableViewDataSource, UITableViewDelegate>
 @property (strong, nonatomic) IBOutlet UITableView *tableView;
@@ -92,14 +93,24 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     // setting timeline view controller as the delgate of the compose view controller
-    UINavigationController *navigationController = [segue destinationViewController];
-    ComposeViewController *composeController = (ComposeViewController*)navigationController.topViewController;
-        composeController.delegate = self;
+    if ([sender isEqual:@"TweetCell"]) {
+        NSIndexPath *myIndexPath = [self.tableView indexPathForCell:sender];
+        Tweet *tweetToExpand = self.arrayOfTweets[myIndexPath.row];
+        DetailsViewController *detailsVC = [segue destinationViewController];
+        detailsVC.tweetDetails = tweetToExpand;
+        
+    } else {
+        UINavigationController *navigationController = [segue destinationViewController];
+        ComposeViewController *composeController = (ComposeViewController*)navigationController.topViewController;
+            composeController.delegate = self;
+    }
+    
 }
 
 
 
 - (IBAction)didTapLogout:(id)sender {
+    
     AppDelegate *appDelegate = (AppDelegate *)[UIApplication sharedApplication].delegate;
     UIStoryboard *storyboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
     LoginViewController *loginViewController = [storyboard instantiateViewControllerWithIdentifier:@"LoginViewController"];

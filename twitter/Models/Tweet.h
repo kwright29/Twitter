@@ -26,6 +26,7 @@ NS_ASSUME_NONNULL_BEGIN
 
 // For Retweets
 @property (nonatomic, strong) User *retweetedByUser;  // If the tweet is a retweet, this will be the user who retweeted
+@property (nonatomic, strong) NSDate *dateToFormat;
 
 //MARK: Methods
 - (instancetype)initWithDictionary:(NSDictionary *)dictionary; // for method to be recognized by compiler

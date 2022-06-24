@@ -55,6 +55,7 @@
     self.displayName.text = self.tweet.user.name;
     self.username.text = self.tweet.user.screenName;
     self.createdDate.text = self.tweet.createdAtString;
+    self.createdDate.text = [self.tweet.dateToFormat shortTimeAgoSinceNow];
     self.textOfTweet.text = self.tweet.text;
     
     NSString *favoriteCountString = [NSString stringWithFormat:@"%i", self.tweet.favoriteCount];
@@ -146,4 +147,9 @@
     }
     
 }
+/*
+action: didTapForTweetDetails
+ 1. refresh data of cell so it comes up in details view controller (if you've already liked/retweeted)
+ 2. segue to details VC
+*/
 @end

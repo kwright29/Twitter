@@ -35,6 +35,7 @@
     [self beginRefresh:self.refreshControl];
     [self.tableView insertSubview:refreshControl atIndex:0]; //adding refresh to table view
     // Get timeline
+    [self.tableView reloadData];
     
     
     
@@ -93,7 +94,8 @@
     // Get the new view controller using [segue destinationViewController].
     // Pass the selected object to the new view controller.
     // setting timeline view controller as the delgate of the compose view controller
-    if ([sender isEqual:@"TweetCell"]) {
+    if ([[segue identifier] isEqualToString:@"TweetDetailsIdentifier"]) {
+        [sender refreshData];
         NSIndexPath *myIndexPath = [self.tableView indexPathForCell:sender];
         Tweet *tweetToExpand = self.arrayOfTweets[myIndexPath.row];
         DetailsViewController *detailsVC = [segue destinationViewController];

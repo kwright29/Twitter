@@ -29,6 +29,8 @@ NS_ASSUME_NONNULL_BEGIN
 - (IBAction)didTapReply:(id)sender;
 @property (strong, nonatomic) Tweet *tweet;
 
+- (void)refreshData;
+
 //- (void)configureTweet:(Tweet *)tweet;
 
 @end

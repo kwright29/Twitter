@@ -78,23 +78,7 @@
     TweetCell *cell = [self.tableView dequeueReusableCellWithIdentifier:@"TweetCell"forIndexPath:indexPath];
     
     cell.tweet = self.arrayOfTweets[indexPath.row];
-    //getting singular tweet
-//    Tweet *tweet = self.arrayOfTweets[indexPath.row];
-//    //Tweet *newTweet = [self initWithDictionary:tweet];
-//
-//    //setting labels etc
-//    cell.displayName.text = tweet.user.name;
-//    cell.username.text = tweet.user.screenName;
-//    cell.createdDate.text = tweet.createdAtString;
-//    cell.textOfTweet.text = tweet.text;
-//
-//    //cell.createdDate.text =
-//
-//    // to get profile picture
-//    NSString *URLString = tweet.user.profilePicture;
-//    NSURL *url = [NSURL URLWithString:URLString];
-//    [cell.profilePic setImageWithURL:url];
-////    NSData *urlData = [NSData dataWithContentsOfURL:url];
+    [cell refreshData];
     
     
     return cell;
